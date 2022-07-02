@@ -1,0 +1,11 @@
+.sidebarItem{
+    height: 40px;
+    border: 1px solid black;
+    text-align: center;
+}
+.sidebarItem button{
+    border: none;
+    outline: 0;
+    padding: 8px;
+    color: inherit
+}
