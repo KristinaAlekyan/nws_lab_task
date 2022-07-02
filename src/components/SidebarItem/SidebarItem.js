@@ -1,11 +1,10 @@
 import './sidebarItem.css';
 
-function SidebarItem({name}) {
-
+function SidebarItem({item, setCategory}) {
     return (
         <div className="sidebarItem">            
-            <button onClick={()=> console.log("name", name)}>
-                {name}
+            <button onClick={()=> setCategory(item.id)}>
+                {item.name}
             </button>
             
         </div>

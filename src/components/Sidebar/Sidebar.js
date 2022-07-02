@@ -3,7 +3,7 @@ import './sidebar.css';
 import { useState, useEffect } from 'react';
 import SidebarItem from '../SidebarItem/SidebarItem';
 
-function Sidebar() {
+function Sidebar({setCategory}) {
     const [categories, setCategories] = useState([])   
 
     useEffect(() => {
@@ -11,7 +11,6 @@ function Sidebar() {
 			.then((response) => response.json())
 			.then((res) => {
 				setCategories(res);
-                console.log("res", res)
 			});
 	}, [])
 
@@ -21,7 +20,8 @@ function Sidebar() {
                 return(
                     <div key={i.id}>
                         <SidebarItem
-                            name ={i.name} 
+                            setCategory={setCategory}
+                            item={i} 
                         />
                     </div>
                 )                

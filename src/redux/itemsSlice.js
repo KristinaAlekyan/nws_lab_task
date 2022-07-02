@@ -4,14 +4,6 @@ const initialState = {
     category: [],
 };
 
-export const fetchCategory = () => async (dispatch) => {
-    await fetch('https://api.thecatapi.com/v1/categories')
-        .then((response) => response.json())
-        .then((res) => {
-            dispatch(setCategory(res))
-        });
-};
-
 
 export const itemsSlice = createSlice({
     name: "itemsSlice ",
